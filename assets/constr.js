@@ -8,6 +8,7 @@ const dimension = {
 function genCell(x, y, content) {
     var cell = document.createElement("div");
     cell.setAttribute("class", "tablable");
+    cell.setAttribute("id", `cell_${x}:${y}`);
     cell.setAttribute("style", `position: absolute; left: ${dimension.width*x}px; top: ${dimension.height*y}px; width: ${dimension.width}px; height: ${dimension.height}px;`)
     cell.innerHTML = `<span style="position: relative; top: ${dimension.height/4}px;">${content}</span>`;
 
@@ -33,15 +34,12 @@ async function build() {
 
     if (DEBUG) console.log(dats);
 
-    var scored = new Set();
-
     dats.forEach((v, k) => {
         if (k.startsWith("team_")) teams.push([parseInt(k.substring(5)), k]);
         if (k.startsWith("score_")) {
             var pos = k.substring(6).split(':');
             pos = [parseInt(pos[0]), parseInt(pos[1])];
             TABLE.appendChild(genCell(pos[0], pos[1], v));
-            scored.add(pos);
         }
     });
 
@@ -61,7 +59,7 @@ async function build() {
 
     for (var i = 1; i < teams.length+1; i++) {
         for (var j = 1; j < teams.length+1; j++) {
-            if (!scored.has([i, j])) TABLE.appendChild(genCell(i, j, "-"));
+            if (document.getElementById(`cell_${i}:${j}`) == null) TABLE.appendChild(genCell(i, j, "-"));
         }
     }
 }
