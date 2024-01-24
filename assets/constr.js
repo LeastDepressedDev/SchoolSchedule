@@ -45,7 +45,7 @@ async function build() {
         }
     });
 
-    TABLE.setAttribute("style", `position: absolute; left: 10%; top: 5%; width: ${dimension.width+dimension.width*teams.length}px; height: ${dimension.height+dimension.height*teams.length}px;`);
+    TABLE.setAttribute("style", `position: absolute; left: 3%; top: 5%; width: ${dimension.width+dimension.width*teams.length}px; height: ${dimension.height+dimension.height*teams.length}px;`);
     TABLE.appendChild(genCell(0, 0, "Команды"));
 
     teams.sort((a, b) => a[0] - b[0]);
