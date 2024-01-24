@@ -1,6 +1,15 @@
-function get_data() {
-    var res;
-    res = axios.get("https://raw.githubusercontent.com/arnav7633/tej.js/main/tsconfig.json");
-    return res;
+class AddresedData {
+    key;
+    val;
+
+    constructor(key, val) {
+        this.key = key;
+        this.val = val;
+    }
 }
 
+function format(line) {
+    var nl = line.replace('\n', '');
+    if (line != nl) return format(nl);
+    else return nl;
+}

@@ -1,0 +1,64 @@
+@keyframes intext {
+    from {
+        top: -15%;
+        opacity: 0%;
+    }
+
+    to {
+        top: 3%;
+        opacity: 100%;
+    }
+}
+
+@keyframes opca {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes opca3 {
+    0% {
+        opacity: 0%;
+    }
+    30% {
+        opacity: 15%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes body {
+    from {
+        background-color: rgba(98, 255, 0, 0.638);
+    }
+
+    to {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+body {
+    animation-name: body;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#main_score_table {
+    font-kerning: auto;
+    text-align: center;
+}
+
+.tablable {
+    border: solid;
+    border-width: 1px;
+
+    animation-name: opca;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out
+}
