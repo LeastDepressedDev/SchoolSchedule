@@ -4,7 +4,7 @@
 
 ;
 
-team1_@TEAM_1_PH;
-team2_@TEAM_2_PH;
-team3_@TEAM_3_PH;
-team4_@TEAM_4_PH;
+team_1@TEAM_1_PH;
+team_2@TEAM_2_PH;
+team_3@TEAM_3_PH;
+team_4@TEAM_4_PH;
