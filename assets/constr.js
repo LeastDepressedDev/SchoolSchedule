@@ -33,11 +33,15 @@ async function build() {
 
     if (DEBUG) console.log(dats);
 
+    var scored = new Set();
+
     dats.forEach((v, k) => {
         if (k.startsWith("team_")) teams.push([parseInt(k.substring(5)), k]);
         if (k.startsWith("score_")) {
             var pos = k.substring(6).split(':');
-            TABLE.appendChild(genCell(parseInt(pos[0]), parseInt(pos[1]), v));
+            pos = [parseInt(pos[0]), parseInt(pos[1])];
+            TABLE.appendChild(genCell(pos[0], pos[1], v));
+            scored.add(pos);
         }
     });
 
@@ -55,5 +59,9 @@ async function build() {
         TABLE.appendChild(genCell(0, i, dats.get(teams[i-1][1])));
     }
 
-    
+    for (var i = 1; i < teams.length+1; i++) {
+        for (var j = 1; j < teams.length+1; j++) {
+            if (!scored.has([i, j])) TABLE.appendChild(genCell(i, j, "-"));
+        }
+    }
 }
