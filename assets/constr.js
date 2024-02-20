@@ -1,8 +1,8 @@
 const DEBUG = false;
 
 const dimension = {
-    width: 200,
-    height: 80
+    width: 140,
+    height: 60
 }
 
 function genCell(x, y, content) {
@@ -40,6 +40,7 @@ async function build() {
             var pos = k.substring(6).split(':');
             pos = [parseInt(pos[0]), parseInt(pos[1])];
             TABLE.appendChild(genCell(pos[0], pos[1], v));
+            TABLE.appendChild(genCell(pos[1], pos[0], revCD(v)));
         }
     });
 

@@ -13,3 +13,8 @@ function format(line) {
     if (line != nl) return format(nl);
     else return nl;
 }
+
+function revCD(line) {
+    var arr = line.split(':');
+    return arr[1] + ':' + arr[0];
+}
