@@ -39,8 +39,8 @@ async function build() {
         if (k.startsWith("score_")) {
             var pos = k.substring(6).split(':');
             pos = [parseInt(pos[0]), parseInt(pos[1])];
-            TABLE.appendChild(genCell(pos[0], pos[1], v));
-            TABLE.appendChild(genCell(pos[1], pos[0], revCD(v)));
+            TABLE.appendChild(genCell(pos[1], pos[0], v));
+            TABLE.appendChild(genCell(pos[0], pos[1], revCD(v)));
         }
     });
 
