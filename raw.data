@@ -4,11 +4,15 @@
 
 ;
 
-team_1@TEAM_1_PH;
-team_2@TEAM_2_PH;
-team_3@TEAM_3_PH;
-team_4@TEAM_4_PH;
+team_1@5¹ (1 состав);
+team_2@5¹ (2 состав);
+team_3@5²;
+team_4@5³ (1 состав);
+team_5@5³ (2 состав);
+team_6@5⁴;
+team_7@6¹;
+team_8@6²;
+team_9@6⁴;
 
-score_2:4@52:32;
-score_3:4@20:20;
-score_1:2@40:3;
+score_1:4@2:0
+score_5:6@0:2

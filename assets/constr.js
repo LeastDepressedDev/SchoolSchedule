@@ -1,8 +1,8 @@
 const DEBUG = false;
 
 const dimension = {
-    width: 100,
-    height: 50
+    width: 200,
+    height: 80
 }
 
 function genCell(x, y, content) {
@@ -10,7 +10,7 @@ function genCell(x, y, content) {
     cell.setAttribute("class", "tablable");
     cell.setAttribute("id", `cell_${x}:${y}`);
     cell.setAttribute("style", `position: absolute; left: ${dimension.width*x}px; top: ${dimension.height*y}px; width: ${dimension.width}px; height: ${dimension.height}px;`)
-    cell.innerHTML = `<span style="position: relative; top: ${dimension.height/4}px;">${content}</span>`;
+    cell.innerHTML = `<span style="position: relative; top: ${dimension.height/3}px;">${content}</span>`;
 
     return cell;
 }
