@@ -3,11 +3,24 @@
     <head>
         <meta charset="utf-16">
         <link rel="stylesheet" type="text/css" href="visual.css">
-        <title id="page_title">Турнирка</title>
+        <title id="page_title">Система просмотра расписаний</title>
     </head>
     <body id="body">
-        <div id="main_score_table" class="tablable"></div>
-        <div id="main_canvas" style="position: absolute; width: 99%; height: 1500px; z-index: -1;"></div>
+        <div class="info-box">
+            <span>Это очень ОЧЕНЬ бета версия системы просмотра расписания. Главный кодер как всегда великий и могучий LDD, 
+                ибо никто другой не могёт UwU.
+            </span>
+        </div>
+        <h1 class="main-title">Расписание уроков 92 гимназии.</h1>
+        <div class="cfg-box">
+            <div>
+                <span>Класс: </span>
+                <select id="class-selector-element" class="selectors">
+                    </select>
+                <span> - </span>
+                <select id="div-selector-element" class="selectors"></select>
+            </div>
+        </div>
     </body>
 
     <span style="text-align: center;"></span>

@@ -8,6 +8,8 @@ class AddresedData {
     }
 }
 
+var stateDict = ["РАБОТАЕТ", "ОТКЛЮЧЕНО", "Тех. работы"];
+
 function format(line) {
     var nl = line.replace('\n', '');
     if (line != nl) return format(nl);
