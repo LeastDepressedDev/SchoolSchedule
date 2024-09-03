@@ -37,10 +37,12 @@ function updateCurrentSchedule() {
     let elem = document.getElementById("main-table");
     elem.innerHTML = "";
 
-    if (date.getDay() == 0 || date.getDay() > data["schedule"][nline]["days"]) {
+    let ovr = document.getElementById("selected-day").value;
+    
+    if (ovr == 0 && (date.getDay() == 0 || date.getDay() > data["schedule"][nline]["days"])) {
         elem.innerHTML = "!!!Выходной!!!";
     } else {
-        let day = data["schedule"][nline]["0"][date.getDay()-1];
+        let day = data["schedule"][nline]["0"][ovr == 0 ? date.getDay()-1 : ovr-1];
         for (var i = 0; i < 11; i++) {
             let tmp = day["pos"][i];
             let cls = tmp == undefined ? "" : data["cabin-reg"][tmp];

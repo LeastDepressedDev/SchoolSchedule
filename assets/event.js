@@ -11,4 +11,5 @@ function fullChange() {
     });
     updateCurrentSchedule();
 }
+document.getElementById("selected-day").onchange = () => updateCurrentSchedule();
 secSel.onchange = () => updateCurrentSchedule();
