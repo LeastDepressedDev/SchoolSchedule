@@ -11,6 +11,7 @@ class AddresedData {
 }
 
 var stateDict = ["РАБОТАЕТ", "ОТКЛЮЧЕНО", "Тех. работы"];
+var dateDict = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
 
 function format(line) {
     var nl = line.replace('\n', '');
