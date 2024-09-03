@@ -73,3 +73,9 @@ body {
     height: 7%;
     font-size: 30px;
 }
+
+#state-h {
+    position: absolute;
+    top: 93%;
+    left: 1%;
+}

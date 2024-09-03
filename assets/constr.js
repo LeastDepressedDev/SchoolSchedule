@@ -7,6 +7,8 @@ var secSel = document.getElementById("div-selector-element");
 
 var class_list = null;
 
+var state = -1
+
 async function build() {
     document.getElementById("day-of-week").innerHTML += dateDict[date.getDay()];
 
@@ -14,6 +16,10 @@ async function build() {
     data = res.data;
 
     if (DEBUG) console.log(data);
+    state = data["state"];
+    document.getElementById("state-h").innerHTML += stateDict[state];
+
+    if (state == 1) return;
 
     class_list = data["class-reg"];
     
@@ -25,6 +31,7 @@ async function build() {
 }
 
 function updateCurrentSchedule() {
+    if (state == 1) return;
     var nline = firstSel.value + "-" + secSel.value;
     
     let elem = document.getElementById("main-table");
