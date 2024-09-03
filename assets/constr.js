@@ -38,7 +38,7 @@ function updateCurrentSchedule() {
             let tmp = day["pos"][i];
             let cls = tmp == undefined ? "" : data["cabin-reg"][tmp];
             cls = cls == undefined ? cls : cls[nline];
-            elem.innerHTML += `<div style="position: absolute; top: ${i == 0 ? "" : i*8+4}%; width: 99%; height: 7%" class="sm-bordered">
+            elem.innerHTML += `<div style="position: absolute; top: ${i*8+8}%; width: 99%; height: 7%" class="sm-bordered">
                         <div style="position: absolute; width: 10%; height: 98%; text-align: center;" class="sm-bordered">${i}</div>
                         <div style="position: absolute; left: 10%; width: 80%; height: 98%" class="sm-bordered">${tmp == undefined ? "" : tmp}</div>
                         <div style="position: absolute; left: 90%; width: 10%; height: 98%; text-align: center;" class="sm-bordered">${cls == undefined ? "" : cls}</div>
