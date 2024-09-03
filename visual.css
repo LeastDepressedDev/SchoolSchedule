@@ -55,9 +55,9 @@ body {
 }
 
 #main-table {
-    border: 10px;
-    height: 93%;
-    border-style: double;
+    border: 3px;
+    height: 96%;
+    border-style: solid;
     border-color: black;
 }
 
