@@ -8,7 +8,7 @@ var secSel = document.getElementById("div-selector-element");
 var class_list = null;
 
 async function build() {
-    document.getElementById("day-of-week").innerHTML += dateDict[date.getDay()+1];
+    document.getElementById("day-of-week").innerHTML += dateDict[date.getDay()];
 
     const res = await axios.get(DATA_LINK);
     data = res.data;
@@ -33,7 +33,7 @@ function updateCurrentSchedule() {
     if (date.getDay() == 0 || date.getDay() > data["schedule"][nline]["days"]) {
         elem.innerHTML = "!!!Выходной!!!";
     } else {
-        let day = data["schedule"][nline]["0"][date.getDay()];
+        let day = data["schedule"][nline]["0"][date.getDay()-1];
         for (var i = 0; i < 11; i++) {
             let tmp = day["pos"][i];
             let cls = tmp == undefined ? "" : data["cabin-reg"][tmp];
