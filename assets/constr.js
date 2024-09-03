@@ -30,11 +30,10 @@ function updateCurrentSchedule() {
     let elem = document.getElementById("main-table");
     elem.innerHTML = "";
 
-    let day = data["schedule"][nline]["0"][date.getDay()];
-
-    if (day == 0) {
-        
+    if (date.getDay() == 0 || date.getDay() > data["schedule"][nline]["days"]) {
+        elem.innerHTML = "!!!Выходной!!!";
     } else {
+        let day = data["schedule"][nline]["0"][date.getDay()];
         for (var i = 0; i < 9; i++) {
             let tmp = day["pos"][i];
             elem.innerHTML += `<div style="position: absolute; top: ${i == 0 ? "" : i}5%; width: 96%; height: 10%" class="sm-bordered">

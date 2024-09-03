@@ -44,6 +44,7 @@ body {
 
 .sm-bordered {
     border: 1px; border-style: solid;
+    font-size: 27px;
 }
 
 .main-title {
