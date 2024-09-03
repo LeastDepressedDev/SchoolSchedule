@@ -1,0 +1,33 @@
+{
+    "This is prototype json that shows format of storing and transfering data": "",
+    "state": int,
+    "schedule": {
+        "10-1": {
+            "days": int,
+            "0": [
+                {
+                    "count": int,
+                    //This is starting from zero lesson
+                    "pos": [
+                        "",
+                        "Физика",
+                        "Физика",
+                        "Физика",
+                        "Физика",
+                        "Физика",
+                        "Физика"
+                    ]
+                }
+            ]
+        }
+    },
+    "class-reg": [
+        {
+            "name": "10",
+            "divs": [
+                "1",
+                "2"
+            ]
+        }
+    ]
+}

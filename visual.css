@@ -1,10 +1,10 @@
 @keyframes main-title-anim {
     0% {
-        top: -30%;
+        opacity: 0;
     }
 
     100% {
-        top: 5%;
+        opacity: 100;
     }
 }
 
@@ -17,12 +17,13 @@ body {
 }
 
 .selectors {
-    width: 12%;
+    width: 50px;
 }
 
 .info-box {
+    opacity: 10%;
     position: absolute;
-    left: 1%;
+    left: 83%;
     top: 1%;
     width: 15%;
     height: 25%;
@@ -33,12 +34,11 @@ body {
 
 .cfg-box {
     position: absolute;
-    left: 29%;
-    top: 23%;
-    width: 40%;
-    height: 28%;
+    top: 13%;
+    width: 25%;
+    height: 58%;
     border: 5px;
-    border-style: outset;
+    border-style: solid;
     border-color: black;
 }
 
@@ -47,7 +47,11 @@ body {
     animation-timing-function: ease-out;
     animation-duration: 1s;
     position: absolute;
-    left: 34%;
-    top: 5%;
-    text-align: center;
+}
+
+#main-table {
+    border: 10px;
+    height: 92%;
+    border-style: double;
+    border-color: black;
 }

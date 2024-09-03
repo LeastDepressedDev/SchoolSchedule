@@ -1,3 +1,5 @@
+var DATA_LINK = "https://raw.githubusercontent.com/LeastDepressedDev/SchoolSchedule/master/data.json";
+
 class AddresedData {
     key;
     val;
